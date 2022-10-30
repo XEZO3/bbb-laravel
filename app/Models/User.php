@@ -44,7 +44,7 @@ class User extends Authenticatable
     function classes(){
         return $this->belongsToMany(Classes::class,'user_classes');
     }
-    // function meetings(){
-    //     return $this->hasMany(meetings::class,'user_id');
-    // }
+    function meetings(){
+        return $this->hasMany(meetings::class,'user_id');
+    }
 }

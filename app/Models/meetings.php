@@ -13,7 +13,7 @@ class meetings extends Model
         'ClassId',
     ];
     use HasFactory;
-    // public function user(){
-    //     return $this->belongsTo(User::class,'user_id');
-    // }
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

@@ -4,7 +4,7 @@
 <div class="container mt-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-8">
-            <form method="post" action="/user">
+            <form method="post" action="/user/register">
                 @csrf
                 <div class="mb-3">
                     <label for="name">full name</label>

@@ -30,7 +30,9 @@ Route::get('/', function () {
 Route::get('/classes', [ClassesController::class,"index"])->middleware('auth');
 Route::get('/class/{class}', [ClassesController::class,"show"])->middleware('auth')->middleware("class");
 Route::get('/register', [UserController::class,"register"])->name('login');
-Route::post('/user', [UserController::class,"store"]);
+Route::post('/user/register', [UserController::class,"store"]);
+Route::post('/user/login', [UserController::class,"loginPost"]);
+Route::get('/login', [UserController::class,"login"]);
 Route::get('/meeting/create',[MeetingController::class,"createMeeting"])->middleware('auth');
 // Route::get('/test', function(){
 //     echo auth()->user()->name;
