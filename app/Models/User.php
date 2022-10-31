@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'permession',
         'password',
     ];
 
@@ -47,4 +48,5 @@ class User extends Authenticatable
     function meetings(){
         return $this->hasMany(meetings::class,'user_id');
     }
+    
 }

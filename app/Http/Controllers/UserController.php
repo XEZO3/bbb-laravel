@@ -18,8 +18,10 @@ class UserController extends Controller
             'name'=>'required|min:3',
             'email'=>'required|email|unique:users',
             'password'=>'required|min:3|confirmed',
+            
         ]);
         $formInputs['password']=bcrypt($formInputs['password']);
+        $formInputs['permession'] = "Admin";
         $user = User::create($formInputs);
         auth()->login($user);
         return redirect("/")->with('message','hhhhh');

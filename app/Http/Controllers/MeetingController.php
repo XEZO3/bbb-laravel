@@ -10,9 +10,9 @@ class MeetingController extends Controller
     
     function createMeeting(Request $request,$randomId=""){
         $meetingId = ($randomId==null)?rand():$randomId;
-        $result = meetingInit::initcreate("zhhhzhhhzhhhz","test335522");
+        $result = meetingInit::initcreate($meetingId,"test5556");
         if($result->returncode=="SUCCESS"){
-           $join= meetingInit::initjoin("zhhhzhhhzhhhz");
+           $join= meetingInit::initjoin($meetingId);
           
           return Redirect::to($join);
         }else{
