@@ -48,6 +48,18 @@ class meetingInit{
          return $result;
          //print_r($result);
     }
+    static function isMeetingRunning($roomid){
+        $confe = [
+            "meetingID"=>($roomid !=null)?$roomid :"t",
+        ];
+        $url= meetingInit::generateUrl($confe,"isMeetingRunning");
+         $xml = simplexml_load_file($url);
+         if($xml->running == "true"){
+            return true;
+        }else{
+           return false;
+        }
+    }
 }
 
 ?>

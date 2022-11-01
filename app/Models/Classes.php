@@ -44,6 +44,9 @@ class Classes extends Model
     public function user(){
         return $this->belongsToMany(User::class,'user_classes');
     }
+    function running_meeting(){
+        return $this->hasOne(running_meeting::class,"classes_id");
+    }
     // public function checkUserClass(){
 
     // }
