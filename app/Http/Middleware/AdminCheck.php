@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminCheck.php
+class AdminCheck
 {
     /**
      * Handle an incoming request.
